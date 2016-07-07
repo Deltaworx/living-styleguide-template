@@ -1,6 +1,7 @@
 var Metalsmith  = require('metalsmith'),
     markdown    = require('metalsmith-markdown'),
-    layouts     = require('metalsmith-layouts');
+    layouts     = require('metalsmith-layouts'),
+    date        = require('metalsmith-build-date');
 
 function myLogger(files, metalsmith, done) {
   console.log('Files: ');
@@ -12,6 +13,7 @@ function myLogger(files, metalsmith, done) {
 
 Metalsmith(__dirname)
   .destination('./build')
+  .use(date())
   .use(markdown())
   .use(layouts({
     engine: 'handlebars',
