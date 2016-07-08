@@ -2,7 +2,7 @@
 
 Since I had to "break some stone" -- or rather, shape some metal -- while building this living styleguide template with metalsmith, I decided to add this as a reference for the future self and for my teammates. Maybe it can be useful for the folks out on the webs as well!
 
-Since I'm a Metalsmith n00b, I had some trouble trying to find documentation among the wealth of resources out there. As such, this tutorial goes REALLY slow. Really really baby steps...
+Since I'm a Metalsmith n00b, I had some trouble trying to find documentation among the wealth of resources out there. As such, this tutorial goes REALLY slow, in baby steps...
 
 ## 1. Installing Metalsmith, and performing a base test
 
@@ -189,6 +189,8 @@ Adding plugins:
 
 * [Metalsmith headings](https://github.com/segmentio/metalsmith-headings) - A Metalsmith plugin that extracts headings from HTML files and attaches them to the file's metadata.
 
+* [Metalsmith assets]()
+
 ## Nice to have
 
 * [Metalsmith Word count](https://www.npmjs.com/package/metalsmith-word-count) - Metalsmith plugin to compute wordcount / average reading time of all paragraphs in a html file
@@ -212,7 +214,7 @@ Adding plugins:
 
 # References
 
-## Metalsmith Usage Tutorials
+## Metalsmith "Base" Tutorials
 
 * [Robin Thrift's Metalsmith tutorials](http://www.robinthrift.com/posts/getting-to-know-metalsmith/) - this tutorial is divided into four parts: Getting to Know Metalsmith, Part 1 - Setting Up the Forge, Part 2 - Shaping The Metal, Part 3 - Refining Our Tools. The tutorials go from 0 to setting up a full blog with some plugins. are rather detailed and would be the resouce that I advise you to start with. However, they are a bit outdated (from 2014), which might make things a little more difficult. Still a great overview, with a final part focusing on more advanced stuff.
 
@@ -220,11 +222,19 @@ Adding plugins:
 
 * [How to create a static site with Metalsmith](https://www.sitepoint.com/create-static-site-metalsmith/) - a very short introduction that doesn't go deep into the details but is nice to have an overview. Also includes a demonstration website, and an overview of handlebar partials.
 
+* [Introduction to Metalsmith](http://blog.andyjiang.com/introduction-to-metalsmith/) - a really short introduction with some tips for further plugins that you can use.
+
+* [The way of Metalsmith](http://blog.lecomte.me/posts/2014/way-of-metalsmith/) - really short intro to how metalsmith works with a very good flow diagram of how plugins are invoked.
+
+* [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/) -
+
 ## Building plugins
 
 * [Metalsmith plugins](http://www.andrewgoodricke.com/blog/metalsmith-plugins/) - a good intro to Metalsmith plugins by Andrew Goodricke
 
 * [Building a complex metalsmith plugin](http://blog.lecomte.me/posts/2015/build-complex-metalsmith-plugin/) - an example of building a metalsmith plugin that is a bit more advanced.
+
+* [Metalsmith more meta custom plugin](https://github.com/sitepoint-editors/metalsmith-demo/blob/master/lib/metalsmith-moremeta.js) - not a tutorial, but a nice way to look at a well structured and contained plugin.
 
 ## Handlebars
 
