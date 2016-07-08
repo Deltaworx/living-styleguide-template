@@ -1,12 +1,44 @@
 <!doctype html>
 <html>
+
   <head>
     <title>{{title}}</title>
   </head>
-  <body>
+
+  <header>
+    <title>{{title}}</title>
+  </header>
+
+  <nav>
+    <ul>
+      {{#each collections as |value key|}}
+        <li> <a href="{{../config.baseURL}}/{{key}}">{{key}}</a> </li>
+      {{/each}}
+    </ul>
+  </nav>
+
+  <article>
     {{{contents}}}
-  </body>
+  </article>
+
+  <aside>
+    {{#if collection}}
+      <h3> {{collection}}: </h3>
+      <ul>
+        {{#each (lookup collections collection) as |value key|}}
+          <li> <a href="{{../config.baseURL}}/{{value.path}}">{{value.title}}</a> </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </aside>
+
   <footer>
-    Change date: <time datetime="{{date}}"> {{date}} <time>
+    {{#if previous}}
+      <a href="{{config.baseURL}}/{{previous.path}}">{{this.previous.title}}</a> </li>
+    {{/if}}
+    {{#if next}}
+      <a href="{{config.baseURL}}/{{next.path}}">{{next.title}}</a> </li>
+    {{/if}}
+    Last changed: <time datetime="{{date}}"> {{date}} <time>
   </footer>
 </html>
