@@ -12,8 +12,14 @@
   <nav>
     <ul>
       {{#each collections as |value key|}}
-        <li> <a href="{{../config.baseURL}}/{{key}}">{{key}}</a> </li>
+      <li> {{key}} </li>
+        <ul>
+          {{#each value as |fvalue fkey|}}
+            <li> <a href="{{../config.baseURL}}/{{fvalue.path}}">{{fvalue.title}}</a> </li>
+          {{/each}}
+        </ul>
       {{/each}}
+      </ul>
     </ul>
   </nav>
 
