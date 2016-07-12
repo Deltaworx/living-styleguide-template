@@ -1,8 +1,7 @@
 ---
 title: Home
-layout: main.hbs
+layout: main_index.hbs
+
 ---
 
-Hello, world!
-
-### Some info!
+This is the home of our living styleguide.
