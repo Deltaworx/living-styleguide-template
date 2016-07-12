@@ -7,33 +7,42 @@ var Metalsmith  = require('metalsmith'),
     metadata    = require('metalsmith-metadata');
 
 function myLogger(files, metalsmith, done) {
-  console.log('Processing files... ');
-  for(var file in files) {
-    console.log(file);
-  }
+  //console.log('Processing files... ');
+  //for(var file in files) {
+  //console.log(file);
+  //  }
+  console.log('-----');
+  console.log(_collections);
+  console.log('-----');
   done();
 }
 
+/*
+function readCollections(files, metalsmith, done) {
+  _collections = metalsmith.metadata().config.collections;
+  console.log(_collections);
+  done();
+}
+*/
+
+var _collections = {
+  assets: { pattern: 'branding/assets/**/*' }
+};
+
 Metalsmith(__dirname)
+  .source('./src')
   .destination('./build')
+  .use(metadata({ config: 'config.yml'}))
   .use(date())
   .use(markdown())
-  .use(metadata({ config: 'config.yml'}))
-  .use(collections({
-    bla1: {
-      pattern: 'folder1/*',
-      refer:   true
-    },
-    bla2: {
-      pattern: 'folder2/*',
-      refer:   true
-    }}))
+  .use(collections(_collections))
   .use(permalinks({
     pattern: ':collections/:title'
   }))
   .use(layouts({
     engine: 'handlebars',
-    directory: 'layouts'
+    directory: 'layouts',
+    partials: 'layouts/partials'
   }))
   .build(function(err) {
     if(err) throw err;
