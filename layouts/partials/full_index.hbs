@@ -1,0 +1,12 @@
+<ul>
+  {{#each collections as |value key|}}
+    <li> <a href="{{../config.baseURL}}/{{value.[0].path}}">{{value.[0].title}}</a> </li>
+      <ul>
+        {{#each value as |fvalue fkey|}}
+          {{#unless @first}}
+            <li> <a href="{{../config.baseURL}}/{{fvalue.path}}">{{fvalue.title}}</a> </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+  {{/each}}
+</ul>

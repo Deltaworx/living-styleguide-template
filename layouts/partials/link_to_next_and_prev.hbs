@@ -1,0 +1,9 @@
+<div>
+  {{#if previous}}
+    < <a href="{{config.baseURL}}/{{previous.path}}">{{this.previous.title}}</a> </li>
+  {{/if}}
+
+  {{#if next}}
+    <a href="{{config.baseURL}}/{{next.path}}">{{this.next.title}}</a> </li> >
+  {{/if}}
+</div>

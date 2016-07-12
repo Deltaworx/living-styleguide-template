@@ -1,0 +1,6 @@
+<ul>
+  <li> <a href="{{../config.baseURL}}/"> Home </a> </li>
+  {{#each collections as |value key|}}
+    <li> <a href="{{../config.baseURL}}/{{value.[0].path}}">{{key}}</a> </li>
+  {{/each}}
+</ul>

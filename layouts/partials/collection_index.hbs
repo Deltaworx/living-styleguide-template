@@ -1,0 +1,19 @@
+{{#if collection}}
+
+  {{!-- ridiculous hack just to show the first --}}
+  {{#each (lookup collections collection) as |value key|}}
+    {{#if @first}}
+      <a href="{{../config.baseURL}}/{{value.path}}">{{value.title}}</a>
+    {{/if}}
+  {{/each}}
+
+  <ul>
+    {{#each (lookup collections collection) as |value key|}}
+      {{#unless @first}}
+        <li> <a href="{{../config.baseURL}}/{{value.path}}">{{value.title}}</a> </li>
+      {{/unless}}
+    {{/each}}
+  <ul>
+
+  </ul>
+{{/if}}
