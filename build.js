@@ -4,7 +4,8 @@ var Metalsmith  = require('metalsmith'),
     date        = require('metalsmith-build-date'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
-    metadata    = require('metalsmith-metadata');
+    metadata    = require('metalsmith-metadata'),
+    assets      = require('metalsmith-assets');
 
 function myLogger(files, metalsmith, done) {
   //console.log('Processing files... ');
@@ -32,7 +33,11 @@ var _collections = {
 Metalsmith(__dirname)
   .source('./src')
   .destination('./build')
-  .use(metadata({ config: 'config.yml'}))
+  .use(metadata({ config: 'config.yml'})) // relative to build directory
+  .use(assets({
+    source: './assets',                   // relative to working directory
+    destination: './assets'               // relative to build directory
+  }))
   .use(date())
   .use(markdown())
   .use(collections(_collections))

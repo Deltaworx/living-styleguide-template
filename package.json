@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
+    "build": "gulp && node build.js",
     "postinstall": "npm run build",
     "start": "node index.js"
   },
@@ -19,9 +19,12 @@
     "debug": "^2.2.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "express": "^4.14.0",
+    "gulp": "^3.9.1",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
     "metalsmith-build-date": "^0.2.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-layouts": "^1.6.5",
