@@ -1,7 +1,7 @@
 
 node_modules/
 build/
-assets/
+assets/compiled
 
 # emacs crap
 *~

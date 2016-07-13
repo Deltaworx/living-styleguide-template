@@ -1,6 +1,10 @@
-<ul>
-  <li> <a href="{{../config.baseURL}}/"> Home </a> </li>
-  {{#each collections as |value key|}}
-    <li> <a href="{{../config.baseURL}}/{{value.[0].path}}">{{key}}</a> </li>
-  {{/each}}
-</ul>
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <a class="blog-nav-item" href="{{../config.baseURL}}/"> Home </a>
+      {{#each collections as |value key|}}
+        <a class="blog-nav-item" href="{{../config.baseURL}}/{{value.[0].path}}">{{key}}</a>
+      {{/each}}
+    </nav>
+  </div>
+</div>
