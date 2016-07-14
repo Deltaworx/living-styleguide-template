@@ -4,4 +4,12 @@ layout: index.hbs
 
 ---
 
-TBD
+## Clear form
+
+## Submit form
+
+## Next step
+
+## Previous step
+
+## Cancel

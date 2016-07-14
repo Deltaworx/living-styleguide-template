@@ -4,4 +4,6 @@ layout: index.hbs
 
 ---
 
-TBD
+## Palette
+
+## Rules

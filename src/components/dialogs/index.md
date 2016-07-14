@@ -4,4 +4,4 @@ layout: index.hbs
 
 ---
 
-TBD
+## Generic modal

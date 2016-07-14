@@ -4,4 +4,10 @@ layout: index.hbs
 
 ---
 
-TBD
+## Filters
+
+## Search form
+
+## Comment form
+
+## Location input

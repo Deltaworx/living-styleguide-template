@@ -4,4 +4,8 @@ layout: index.hbs
 
 ---
 
-TBD
+Each flow diagram should have:
+
+* Main focus
+* KPI
+* Risks analysis

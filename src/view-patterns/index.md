@@ -4,4 +4,12 @@ layout: index.hbs
 
 ---
 
-TBD
+## Show detail
+
+## Create
+
+## Edit
+
+## Index/list
+
+## Delete

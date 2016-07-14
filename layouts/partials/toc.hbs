@@ -1,0 +1,14 @@
+{{#if toc}}
+  <ul>
+    {{#each toc as |item key|}}
+      <li> <a href="#{item.id}"> {{item.text}} </a> </li>
+      {{#if item.children.length}}
+        <ul>
+          {{#each item.children as |itemC keyC| }}
+            <li> <a href="#{itemC.id}"> {{itemC.text}} </a> </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    {{/each}}
+  </ul>
+{{/if}}

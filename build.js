@@ -5,7 +5,8 @@ var Metalsmith  = require('metalsmith'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
     metadata    = require('metalsmith-metadata'),
-    assets      = require('metalsmith-assets');
+    assets      = require('metalsmith-assets'),
+    autotoc     = require('metalsmith-autotoc');
 
 function myLogger(files, metalsmith, done) {
   //console.log('Processing files... ');
@@ -15,6 +16,13 @@ function myLogger(files, metalsmith, done) {
   console.log('-----');
   console.log(_collections);
   console.log('-----');
+  done();
+}
+
+function setAutoToc(files, metalsmith, done) {
+  for(var file in files) {
+    files[file]['autotoc'] = true;
+  }
   done();
 }
 
@@ -58,6 +66,8 @@ Metalsmith(__dirname)
   .use(date())
   .use(markdown())
   .use(collections(_collections))
+  .use(setAutoToc)
+  .use(autotoc({selector: 'h2, h3'}))
   .use(permalinks({
     pattern: ':collections/:title'
   }))
