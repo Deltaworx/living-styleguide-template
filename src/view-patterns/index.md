@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: View Patterns
 layout: index.hbs
 
 ---

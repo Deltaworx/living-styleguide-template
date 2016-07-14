@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Features
 layout: index.hbs
 
 ---

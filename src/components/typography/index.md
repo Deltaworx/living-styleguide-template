@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Typography
 layout: index.hbs
 
 ---

@@ -18,16 +18,33 @@ function myLogger(files, metalsmith, done) {
   done();
 }
 
-/*
-function readCollections(files, metalsmith, done) {
-  _collections = metalsmith.metadata().config.collections;
-  console.log(_collections);
-  done();
-}
-*/
-
 var _collections = {
-  assets: { pattern: 'branding/assets/**/*' }
+  assets: { pattern: 'branding/assets/**/*', title: 'Assets BLA' },
+  guidelines: { pattern: 'branding/guidelines/**/*' },
+  screenshots: { pattern: 'branding/screenshots/**/*' },
+  iconography: { pattern: 'components/iconography/**/*' },
+  typography: { pattern: 'components/typography/**/*' },
+  layout: { pattern: 'components/layout/**/*' },
+  'grid-system': { pattern: 'components/grid-system/**/*' },
+  navigation: { pattern: 'components/navigation/**/*' },
+  tables: { pattern: 'components/tables/**/*' },
+  colors: { pattern: 'components/colors/**/*' },
+  text: { pattern: 'components/text/**/*' },
+  blocks: { pattern: 'components/blocks/**/*' },
+  images: { pattern: 'components/images/**/*' },
+  tooltips: { pattern: 'components/tooltips/**/*' },
+  'form-atomic-elements': { pattern: 'components/forms/atomic-elements/**/*' },
+  'form-groups': { pattern: 'components/forms/form-groups/**/*' },
+  'form-buttons': { pattern: 'components/forms/buttons/**/*' },
+  'form-validation': { pattern: 'components/forms/validation/**/*' },
+  'form-patterns': { pattern: 'components/forms/patterns/**/*' },
+  dialogs: { pattern: 'components/dialogs/*' },
+  feedback: { pattern: 'components/feedback/*' },
+  cards: { pattern: 'components/cards/*' },
+  'view-patterns': { pattern: 'view-patterns/*' },
+  'business-definitions': { pattern: 'business-definitions/*' },
+  features: { pattern: 'features/*' },
+  'flow-diagrams': { pattern: 'flow-diagrams/*' }
 };
 
 Metalsmith(__dirname)

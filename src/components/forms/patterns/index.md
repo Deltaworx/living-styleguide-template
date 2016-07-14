@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Form Patterns
 layout: index.hbs
 
 ---

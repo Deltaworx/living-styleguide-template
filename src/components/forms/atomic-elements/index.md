@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Form atomic elements
 layout: index.hbs
 
 ---

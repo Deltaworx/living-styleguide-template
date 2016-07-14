@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Flow Diagrams
 layout: index.hbs
 
 ---

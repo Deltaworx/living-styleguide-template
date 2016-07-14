@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Grid System
 layout: index.hbs
 
 ---

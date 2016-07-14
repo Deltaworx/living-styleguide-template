@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Tooltips
 layout: index.hbs
 
 ---

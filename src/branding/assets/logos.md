@@ -1,10 +1,8 @@
 ---
-title: Logos 2
+title: Logos
 layout: main.hbs
 
 ---
-
-LALALALALALALALAL
 
 ## Logo 1
 

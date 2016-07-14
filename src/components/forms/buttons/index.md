@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Buttons
 layout: index.hbs
 
 ---

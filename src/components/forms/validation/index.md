@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Form Validation
 layout: index.hbs
 
 ---

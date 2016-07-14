@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Blocks
 layout: index.hbs
 
 ---

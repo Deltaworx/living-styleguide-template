@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Cards
 layout: index.hbs
 
 ---

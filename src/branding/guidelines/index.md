@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Guidelines
 layout: index.hbs
 
 ---

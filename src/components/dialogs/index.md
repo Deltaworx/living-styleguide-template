@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: Dialogs
 layout: index.hbs
 
 ---
