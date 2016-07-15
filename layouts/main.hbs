@@ -1,29 +1,41 @@
 <!doctype html>
 <html>
 
-  <head>
-    {{> head}}
-  </head>
+  <body>
+    <head>
+      {{> head}}
+    </head>
 
-  <header>
-    <title>{{title}}</title>
-  </header>
-
-  <nav>
     {{> navbar }}
-  </nav>
 
-  <article>
-    {{{contents}}}
-  </article>
+    <div class="container">
 
-  <aside>
-    {{> aside}}
-  </aside>
+      <div class="blog-header">
+        <h1 class="blog-title">{{title}}</h1>
+        <p class="lead blog-description">{{description}}</p>
+      </div>
 
-  <footer>
-    {{> link_to_next_and_prev }}
-    {{> time_last_changed }}
-  </footer>
 
+      <div class="row">
+        <article class="col-sm-8 blog-main">
+          <div class="blog-post">
+            {{{contents}}}
+          </div>
+        </article>
+
+        <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            {{> aside}}
+          </div>
+        </aside>
+      </div>
+
+    </div>
+
+    <footer>
+      {{> link_to_next_and_prev }}
+      {{> time_last_changed }}
+    </footer>
+
+  </body>
 </html>

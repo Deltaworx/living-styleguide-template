@@ -1,9 +1,11 @@
-<div>
-  {{#if previous}}
-    < <a href="{{config.baseURL}}/{{previous.path}}">{{this.previous.title}}</a> </li>
-  {{/if}}
+<nav>
+  <ul class="pager">
+    {{#if previous}}
+      <li> <a href="{{config.baseURL}}/{{previous.path}}">Previous</a> </li>
+    {{/if}}
 
-  {{#if next}}
-    <a href="{{config.baseURL}}/{{next.path}}">{{this.next.title}}</a> </li> >
-  {{/if}}
-</div>
+    {{#if next}}
+      <li> <a href="{{config.baseURL}}/{{next.path}}">Next</a> </li>
+    {{/if}}
+  </ul>
+</nav>
