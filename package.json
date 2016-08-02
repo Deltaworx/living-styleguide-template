@@ -16,7 +16,8 @@
   "author": "Luisa Lima",
   "license": "MIT",
   "devDependencies": {
-    "debug": "^2.2.0"
+    "debug": "^2.2.0",
+    "metalsmith-watch": "^1.0.3"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",

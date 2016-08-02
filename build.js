@@ -6,7 +6,8 @@ var Metalsmith  = require('metalsmith'),
     permalinks  = require('metalsmith-permalinks'),
     metadata    = require('metalsmith-metadata'),
     assets      = require('metalsmith-assets'),
-    autotoc     = require('metalsmith-autotoc');
+    autotoc     = require('metalsmith-autotoc'),
+    watch       = require('metalsmith-watch');
 
 function myLogger(files, metalsmith, done) {
   //console.log('Processing files... ');
@@ -58,6 +59,7 @@ var _collections = {
 Metalsmith(__dirname)
   .source('./src')
   .destination('./build')
+  .use(watch({paths: {"src/**/*": true, "layouts/**/*": "**/*.md"}}))
   .use(metadata({ config: 'config.yml'})) // relative to build directory
   .use(assets({
     source: './assets',                   // relative to working directory
