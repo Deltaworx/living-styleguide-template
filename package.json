@@ -8,7 +8,7 @@
     "build": "gulp && node build.js",
     "postinstall": "npm run build",
     "start": "node index.js",
-    "dev": "npm run build & npm start"
+    "dev": "npm run build --watch & npm start"
   },
   "keywords": [
     "living",
@@ -30,6 +30,7 @@
     "metalsmith-autotoc": "^0.1.2",
     "metalsmith-build-date": "^0.2.0",
     "metalsmith-collections": "^0.7.0",
+    "metalsmith-if": "^0.1.1",
     "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",

@@ -7,16 +7,14 @@ var Metalsmith  = require('metalsmith'),
     metadata    = require('metalsmith-metadata'),
     assets      = require('metalsmith-assets'),
     autotoc     = require('metalsmith-autotoc'),
-    watch       = require('metalsmith-watch');
+    watch       = require('metalsmith-watch'),
+    msIf        = require('metalsmith-if');
 
 function myLogger(files, metalsmith, done) {
-  //console.log('Processing files... ');
-  //for(var file in files) {
-  //console.log(file);
-  //  }
-  console.log('-----');
-  console.log(_collections);
-  console.log('-----');
+  console.log('Processing files... ');
+  for(var file in files) {
+    console.log(file);
+  }
   done();
 }
 
@@ -25,6 +23,10 @@ function setAutoToc(files, metalsmith, done) {
     files[file]['autotoc'] = true;
   }
   done();
+}
+
+function watchModeEnabled() {
+  return process.argv[2] === '--watch';
 }
 
 var _collections = {
@@ -59,7 +61,7 @@ var _collections = {
 Metalsmith(__dirname)
   .source('./src')
   .destination('./build')
-  .use(watch({paths: {"src/**/*": true, "layouts/**/*": "**/*.md"}}))
+  .use(msIf(watchModeEnabled(), watch({paths: {"src/**/*": true, "layouts/**/*": "**/*.md"}})))
   .use(metadata({ config: 'config.yml'})) // relative to build directory
   .use(assets({
     source: './assets',                   // relative to working directory
