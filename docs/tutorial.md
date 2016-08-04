@@ -226,7 +226,7 @@ Adding plugins:
 
 * [The way of Metalsmith](http://blog.lecomte.me/posts/2014/way-of-metalsmith/) - really short intro to how metalsmith works with a very good flow diagram of how plugins are invoked.
 
-* [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/) -
+* [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/) - nice overview tutorial, complete with some workflow tips.
 
 ## Building plugins
 
