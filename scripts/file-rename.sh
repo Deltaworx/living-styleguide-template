@@ -1,7 +1,8 @@
-FILES=`find \`pwd\` -name index.md`
+FILES=`find \`pwd\` -name 0-index.md`
 for FILE in $FILES
 do
-    NEWFILE=`echo $FILE | sed 's/index.md/0-index.md'`
+    echo $FILE
+    NEWFILE=`echo $FILE | sed 's/0-index.md/index.md/'`
     echo $NEWFILE
-    g mv $FILE $NEWFILE
+    git mv $FILE $NEWFILE
 done

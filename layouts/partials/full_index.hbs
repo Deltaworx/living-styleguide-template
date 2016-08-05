@@ -1,7 +1,7 @@
 <ul>
   {{#each collections as |value key|}}
 
-    <li> <a class="blog-nav-item" href="{{../config.baseURL}}/{{key}}/0-index/"> {{lookup (lookup (lookup value.[0] "collectionInfo") key) "title"}} </a> </li>
+    <li> <a class="blog-nav-item" href="{{../config.baseURL}}/{{key}}/"> {{lookup (lookup (lookup value.[0] "collectionInfo") key) "title"}} </a> </li>
     {{> collection_index value=value key=key }}
   {{/each}}
 </ul>
