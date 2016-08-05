@@ -19,6 +19,9 @@
       <div class="row">
         <article class="col-sm-8 blog-main">
           <div class="blog-post">
+
+            {{> collection_index value=(lookup collections collection) key=collection.[0] }}
+
             {{{contents}}}
           </div>
         </article>

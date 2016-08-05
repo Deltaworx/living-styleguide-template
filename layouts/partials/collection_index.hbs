@@ -1,19 +1,7 @@
-{{#if collection}}
-
-  {{!-- ridiculous hack just to show the first --}}
-  {{#each (lookup collections collection) as |value key|}}
-    {{#if @first}}
-      <a href="{{../config.baseURL}}/{{value.path}}">{{value.title}}</a>
-    {{/if}}
+ <ul>
+  {{#each value as |fvalue fkey|}}
+    {{#isnt fvalue.title (lookup (lookup fvalue.collectionInfo ../key) "title")}}
+      <li> <a href="{{../config.baseURL}}/{{fvalue.path}}">{{fvalue.title}}</a> </li>
+    {{/isnt}}
   {{/each}}
-
-  <ul>
-    {{#each (lookup collections collection) as |value key|}}
-      {{#unless @first}}
-        <li> <a href="{{../config.baseURL}}/{{value.path}}">{{value.title}}</a> </li>
-      {{/unless}}
-    {{/each}}
-  <ul>
-
-  </ul>
-{{/if}}
+</ul>

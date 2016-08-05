@@ -3,7 +3,9 @@
     <nav class="blog-nav">
       <a class="blog-nav-item" href="{{../config.baseURL}}/"> Home </a>
       {{#each collections as |value key|}}
-        <a class="blog-nav-item" href="{{../config.baseURL}}/{{value.[0].path}}">{{value.[0].title}} </a>
+        <a class="blog-nav-item" href="{{../config.baseURL}}/{{key}}/0-index/">
+          {{lookup (lookup value.[0].collectionInfo key) 'title'}}
+        </a>
       {{/each}}
     </nav>
   </div>

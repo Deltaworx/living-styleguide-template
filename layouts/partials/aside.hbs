@@ -3,5 +3,5 @@
 
 <hr>
 
-<h4> Inside this collection... </h4>
-{{> collection_index }}
+<h4> More inside {{lookup (lookup collectionInfo collection.[0]) "title"}} </h4>
+{{> collection_index value=(lookup collections collection) key=collection.[0] }}

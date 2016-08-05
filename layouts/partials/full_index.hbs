@@ -1,12 +1,7 @@
 <ul>
   {{#each collections as |value key|}}
-    <li> <a href="{{../config.baseURL}}/{{value.[0].path}}">{{value.[0].title}}</a> </li>
-      <ul>
-        {{#each value as |fvalue fkey|}}
-          {{#unless @first}}
-            <li> <a href="{{../config.baseURL}}/{{fvalue.path}}">{{fvalue.title}}</a> </li>
-          {{/unless}}
-        {{/each}}
-      </ul>
+
+    <li> <a class="blog-nav-item" href="{{../config.baseURL}}/{{key}}/0-index/"> {{lookup (lookup (lookup value.[0] "collectionInfo") key) "title"}} </a> </li>
+    {{> collection_index value=value key=key }}
   {{/each}}
 </ul>
