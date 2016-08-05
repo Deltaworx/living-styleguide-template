@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp && node build.js",
+    "watch": "gulp && node build.js --watch",
     "postinstall": "npm run build",
     "start": "node index.js",
-    "dev": "npm run build --watch & npm start"
+    "dev": "npm run watch & npm start"
   },
   "keywords": [
     "living",
