@@ -1,14 +1,28 @@
 {{#if toc}}
-  <ol class="list-unstyled">
+
+  <ol>
     {{#each toc as |item key|}}
       <li> <a href="#{item.id}"> {{item.text}} </a> </li>
+
       {{#if item.children.length}}
-        <ol class="list-unstyled">
+        <ol>
           {{#each item.children as |itemC keyC| }}
             <li> <a href="#{itemC.id}"> {{itemC.text}} </a> </li>
+
+
+        {{#if itemC.children.length}}
+          <ol>
+            {{#each itemC.children as |itemD keyD| }}
+              <li> <a href="#{itemD.id}"> {{itemD.text}} </a> </li>
+            {{/each}}
+          </ol>
+        {{/if}}
+
+
           {{/each}}
         </ol>
       {{/if}}
+
     {{/each}}
   </ol>
 {{/if}}

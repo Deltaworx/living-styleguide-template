@@ -71,7 +71,7 @@ Metalsmith(__dirname)
   .use(markdown())
   .use(collections(_collections))
   .use(setAutoToc)
-  .use(autotoc({selector: 'h2, h3'}))
+  .use(autotoc({selector: 'h2, h3, h4'}))
   .use(permalinks({
     pattern: ':collections/:title'
   }))
