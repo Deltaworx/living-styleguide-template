@@ -1,7 +1,15 @@
 ---
 title: Guidelines
-layout: index.hbs
+layout: main.hbs
 
 ---
 
-TBD
+Guidelines ...
+
+## Table
+
+### of
+
+### contents
+
+#### demo
