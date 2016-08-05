@@ -9,6 +9,8 @@ var Metalsmith  = require('metalsmith'),
     autotoc     = require('metalsmith-autotoc'),
     watch       = require('metalsmith-watch'),
     msIf        = require('metalsmith-if'),
+    Handlebars  = require('handlebars'),
+    helpers     = require('handlebars-helpers');
 
 function myLogger(files, metalsmith, done) {
   console.log('Processing files... ');
@@ -27,6 +29,13 @@ function setAutoToc(files, metalsmith, done) {
 
 function watchModeEnabled() {
   return process.argv[2] === '--watch';
+}
+
+function registerHandlebarsHelpers(files, metalsmith, done) {
+  for(var file in files) {
+    Handlebars.registerHelper('comparison', helpers.comparison())
+  }
+  done();
 }
 
 var _collections = {
@@ -67,6 +76,7 @@ Metalsmith(__dirname)
     source: './assets',                   // relative to working directory
     destination: './assets'               // relative to build directory
   }))
+  .use(registerHandlebarsHelpers)
   .use(date())
   .use(markdown())
   .use(collections(_collections))
