@@ -8,7 +8,7 @@ var Metalsmith  = require('metalsmith'),
     assets      = require('metalsmith-assets'),
     autotoc     = require('metalsmith-autotoc'),
     watch       = require('metalsmith-watch'),
-    msIf        = require('metalsmith-if');
+    msIf        = require('metalsmith-if'),
 
 function myLogger(files, metalsmith, done) {
   console.log('Processing files... ');
