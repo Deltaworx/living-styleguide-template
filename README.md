@@ -30,6 +30,7 @@ git remote add updates https://github.com/Deltaworx/living-styleguide-template.g
 
 ```
 # if you want to merge the changes
+git fetch updates
 git checkout -b updates-master updates/master
 git pull
 git checkout -b my_branch
