@@ -1,16 +1,18 @@
-var Metalsmith  = require('metalsmith'),
-    markdown    = require('metalsmith-markdown'),
-    layouts     = require('metalsmith-layouts'),
-    date        = require('metalsmith-build-date'),
-    collections = require('metalsmith-collections'),
-    permalinks  = require('metalsmith-permalinks'),
-    metadata    = require('metalsmith-metadata'),
-    assets      = require('metalsmith-assets'),
-    autotoc     = require('metalsmith-autotoc'),
-    watch       = require('metalsmith-watch'),
-    msIf        = require('metalsmith-if'),
-    Handlebars  = require('handlebars'),
-    helpers     = require('handlebars-helpers');
+var Metalsmith    = require('metalsmith'),
+    markdown      = require('metalsmith-markdown'),
+    layouts       = require('metalsmith-layouts'),
+    date          = require('metalsmith-build-date'),
+    collections   = require('metalsmith-collections'),
+    permalinks    = require('metalsmith-permalinks'),
+    metadata      = require('metalsmith-metadata'),
+    assets        = require('metalsmith-assets'),
+    autotoc       = require('metalsmith-autotoc'),
+    watch         = require('metalsmith-watch'),
+    msIf          = require('metalsmith-if'),
+    Handlebars    = require('handlebars'),
+    helpers       = require('handlebars-helpers'),
+    metallic      = require('metalsmith-metallic'),
+    highlight      = require('metalsmith-code-highlight');
 
 function myLogger(files, metalsmith, done) {
   console.log('Processing files... ');
@@ -65,6 +67,7 @@ Metalsmith(__dirname)
   }))
   .use(registerHandlebarsHelpers)
   .use(date())
+  .use(metallic({classPrefix:''}))
   .use(markdown())
   .use(setCollectionInfoForMenu)
   .use(collections(_collections))
